@@ -1,0 +1,16 @@
+# Object files
+*.o
+*.pdb
+
+# Executables
+*.pdx
+*.bin
+
+# Playdate SDK build files
+*.pdxuserprefs
+.pdxuserprefs
+build/
+dist/
+
+# Playdate JSON files
+*.json
