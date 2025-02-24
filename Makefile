@@ -25,6 +25,7 @@ SRC = \
       src/base/base.c \
       src/data/data_read.c \
       src/data/data_write.c \
+      src/keyboard/keyboard.c \
 			src/main.c \
 
 # List all user directories here
@@ -47,3 +48,9 @@ ULIBS =
 
 include $(SDK)/C_API/buildsupport/common.mk
 
+copy_assets: all
+	mkdir -p Source/CoreLibs/assets/keyboard
+	mkdir -p Source/CoreLibs/assets/sfx
+	cp $(SDK)/CoreLibs/assets/keyboard/* Source/CoreLibs/assets/keyboard
+	cp $(SDK)/CoreLibs/assets/sfx/* Source/CoreLibs/assets/sfx
+	cp $(SDK)/Resources/Fonts/Asheville/Asheville\ Sans\ 14\ Bold/* Source
