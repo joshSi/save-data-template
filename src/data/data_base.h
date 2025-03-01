@@ -4,7 +4,7 @@
 typedef struct 
 {
   char name[65];
-  int score;
+  float score;
   int itemCount;
   char** items;
 } SaveData;

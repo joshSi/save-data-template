@@ -16,7 +16,8 @@ void loadSaveData(SaveData* saveData, const char* filename) {
 		.willDecodeSublist = willDecodeSublist,
 		.userdata = saveData
 	};
-	SDFile* file = pd->file->open(filename, kFileRead);
+	SDFile* file = pd->file->open(filename, kFileRead|kFileReadData);
+
 	json_value val;
 	pd->json->decode(&decoder, (json_reader){ .read = (json_readFunc*)pd->file->read, .userdata = file }, &val);
 	pd->file->close(file);
