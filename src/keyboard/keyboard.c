@@ -1002,7 +1002,7 @@ static void loadFontAndImages(void) {
         return;
     }
     const char *error = NULL;
-    keyboardFont = pd->graphics->loadFont("CoreLibs/assets/keyboard/Roobert-24-Keyboard-Medium", &error);
+    keyboardFont = pd->graphics->loadFont(FONTPATH, &error);
     if (error) {
         pd->system->error("Unable to load font: %s", error);
     }

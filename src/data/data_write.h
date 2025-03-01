@@ -4,8 +4,6 @@
 #include "data_base.h"
 #include "../base/base.h"
 
-// TODO: Implement writing save data
-
-void writefile(void* userdata, const char* str, int len);
+void writeSaveData(SaveData* saveData, const char* filename);
 
 #endif
